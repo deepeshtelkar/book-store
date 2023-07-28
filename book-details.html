@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Book Store - Book Details</title>
+</head>
+<body>
+    <h1>Book Details</h1>
+    <p th:if="${book}">
+        <strong>Title:</strong> <span th:text="${book.title}"></span><br>
+        <strong>Author:</strong> <span th:text="${book.author}"></span><br>
+        <strong>Price:</strong> <span th:text="${book.price}"></span><br>
+    </p>
+    <p th:unless="${book}">Book not found.</p>
+</body>
+</html>
